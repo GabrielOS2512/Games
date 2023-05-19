@@ -2,17 +2,32 @@
 <html>
 <head>
     <script src="js/main.js"></script>
+    <script src="js/car.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <style>
 canvas {
-    border:1px solid #d3d3d3;
-    background-color: #f1f1f1;
+    border:1px solid #575656;
+    background-color: #e4e1e1;
 }
 </style>
 </head>
 <body onload="startGame()">
-    <h3>GAME</h3>
     <p id="speed"></p>
-    <p id="delta"></p>
+    <p id="position"></p>
+    <p id="tick"></p>
+        <script>
+        // Add event listener to the document
+        document.addEventListener('click', logCoordinates);
+        
+        // Event handler function
+        function logCoordinates(event) {
+          // Retrieve the mouse click coordinates
+          const x = event.clientX;
+          const y = event.clientY;
+          
+          // Log the coordinates
+          console.log('Mouse click coordinates:', x, y);
+        }
+      </script>
 </body>
 </html>
